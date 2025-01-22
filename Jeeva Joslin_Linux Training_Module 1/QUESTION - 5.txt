@@ -1,0 +1,12 @@
+5) Create 3 files in a dir1 and re-direct the output of list command with sorted by timestamp of the files to a file
+
+
+
+jeeva@JEEVA:~/embedUR$ mkdir dir1
+jeeva@JEEVA:~/embedUR$ touch dir1/file1 dir1/file2 dir1/file3
+jeeva@JEEVA:~/embedUR$ ls -lt dir1 > sorted.txt
+jeeva@JEEVA:~/embedUR$ cat sorted.txt
+total 0
+-rw-rw-r-- 1 jeeva jeeva 0 Jan 23 01:24 file1
+-rw-rw-r-- 1 jeeva jeeva 0 Jan 23 01:24 file2
+-rw-rw-r-- 1 jeeva jeeva 0 Jan 23 01:24 file3

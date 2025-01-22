@@ -1,0 +1,11 @@
+1) Create a file and add executable permission to all users (user, group and others)
+
+
+jeeva@JEEVA:~/embedUR$ touch ques1.txt
+jeeva@JEEVA:~/embedUR$ ls -l
+total 0
+-rw-rw-r-- 1 jeeva jeeva 0 Jan 23 00:25 ques1.txt
+jeeva@JEEVA:~/embedUR$ chmod a+x ques1.txt
+jeeva@JEEVA:~/embedUR$ ls -l
+total 0
+-rwxrwxr-x 1 jeeva jeeva 0 Jan 23 00:25 ques1.txt

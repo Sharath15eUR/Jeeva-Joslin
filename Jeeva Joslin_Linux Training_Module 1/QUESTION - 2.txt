@@ -1,0 +1,12 @@
+2) Create a file and remove write permission for group user alone.
+
+jeeva@JEEVA:~/embedUR$ touch ques2.txt
+jeeva@JEEVA:~/embedUR$ ls -l
+total 0
+-rwxrwxr-x 1 jeeva jeeva 0 Jan 23 00:25 ques1.txt
+-rw-rw-r-- 1 jeeva jeeva 0 Jan 23 00:26 ques2.txt
+jeeva@JEEVA:~/embedUR$ chmod g-w ques2.txt
+jeeva@JEEVA:~/embedUR$ ls -l
+total 0
+-rwxrwxr-x 1 jeeva jeeva 0 Jan 23 00:25 ques1.txt
+-rw-r--r-- 1 jeeva jeeva 0 Jan 23 00:26 ques2.txt
