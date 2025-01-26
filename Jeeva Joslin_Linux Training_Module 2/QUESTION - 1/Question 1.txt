@@ -1,3 +1,5 @@
+1)Use the appropriate command to list all files larger than 1 MB in the current directory and save the output to a file.
+
 jeeva@JEEVA:~/embedUR/Module2/Q1$ ls -lh
 total 7.9M
 -rw-rw-r-- 1 jeeva jeeva 1.8M Jan 26 14:43 Bee_Colony_based_feature_Optimization.pdf
