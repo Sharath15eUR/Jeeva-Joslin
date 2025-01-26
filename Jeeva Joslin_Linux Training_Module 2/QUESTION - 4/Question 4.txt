@@ -1,3 +1,5 @@
+4) Write a code to identify the process with the highest memory usage and then terminate it.
+
 jeeva@JEEVA:~/embedUR/Module2/Q4$ cat output.txt
 Process with the highest memory usage (PID: 3143):
     PID COMMAND         %MEM
