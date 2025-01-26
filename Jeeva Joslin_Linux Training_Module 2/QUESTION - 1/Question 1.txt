@@ -1,0 +1,36 @@
+jeeva@JEEVA:~/embedUR/Module2/Q1$ ls -lh
+total 7.9M
+-rw-rw-r-- 1 jeeva jeeva 1.8M Jan 26 14:43 Bee_Colony_based_feature_Optimization.pdf
+-rw-rw-r-- 1 jeeva jeeva 1.1M Jan 26 14:43 Federated_Learning_Disease_Diagnosis_Mechanism.pdf
+-rw-rw-r-- 1 jeeva jeeva 1.5M Jan 26 14:43 File.pdf
+-rw-rw-r-- 1 jeeva jeeva 389K Jan 26 14:44 The_Linux_Kernel_documentation.pdf
+-rw-rw-r-- 1 jeeva jeeva 3.2M Jan 26 14:44 trainer_state.json
+jeeva@JEEVA:~/embedUR/Module2/Q1$ ls -l
+total 8080
+-rw-rw-r-- 1 jeeva jeeva 1871706 Jan 26 14:43 Bee_Colony_based_feature_Optimization.pdf
+-rw-rw-r-- 1 jeeva jeeva 1123271 Jan 26 14:43 Federated_Learning_Disease_Diagnosis_Mechanism.pdf
+-rw-rw-r-- 1 jeeva jeeva 1560367 Jan 26 14:43 File.pdf
+-rw-rw-r-- 1 jeeva jeeva  398008 Jan 26 14:44 The_Linux_Kernel_documentation.pdf
+-rw-rw-r-- 1 jeeva jeeva 3312600 Jan 26 14:44 trainer_state.json
+jeeva@JEEVA:~/embedUR/Module2/Q1$ ls -l | awk '$5 > (1024*1024) {print $9}' > output.txt
+jeeva@JEEVA:~/embedUR/Module2/Q1$ cat output.txt
+Bee_Colony_based_feature_Optimization.pdf
+Federated_Learning_Disease_Diagnosis_Mechanism.pdf
+File.pdf
+trainer_state.json
+
+jeeva@JEEVA:~/embedUR/Module2/Q1$ ls -lh
+total 7.9M
+-rw-rw-r-- 1 jeeva jeeva 1.8M Jan 26 14:43 Bee_Colony_based_feature_Optimization.pdf
+-rw-rw-r-- 1 jeeva jeeva 1.1M Jan 26 14:43 Federated_Learning_Disease_Diagnosis_Mechanism.pdf
+-rw-rw-r-- 1 jeeva jeeva 1.5M Jan 26 14:43 File.pdf
+-rw-rw-r-- 1 jeeva jeeva    0 Jan 26 16:04 large.txt
+-rw-rw-r-- 1 jeeva jeeva  121 Jan 26 15:17 output.txt
+-rw-rw-r-- 1 jeeva jeeva 389K Jan 26 14:44 The_Linux_Kernel_documentation.pdf
+-rw-rw-r-- 1 jeeva jeeva 3.2M Jan 26 14:44 trainer_state.json
+jeeva@JEEVA:~/embedUR/Module2/Q1$ find . -type f -size +1M -exec ls -lh {} + | awk '{ print $9 ": " $5 }' > large.txt
+jeeva@JEEVA:~/embedUR/Module2/Q1$ cat large.txt
+./Bee_Colony_based_feature_Optimization.pdf: 1.8M
+./Federated_Learning_Disease_Diagnosis_Mechanism.pdf: 1.1M
+./File.pdf: 1.5M
+./trainer_state.json: 3.2M
