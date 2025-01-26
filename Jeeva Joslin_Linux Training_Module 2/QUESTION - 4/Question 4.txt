@@ -1,0 +1,76 @@
+jeeva@JEEVA:~/embedUR/Module2/Q4$ cat output.txt
+Process with the highest memory usage (PID: 3143):
+    PID COMMAND         %MEM
+   3143 gnome-shell      9.8
+Terminating process 3143...
+Process 3143 terminated successfully.
+
+
+jeeva@JEEVA:~/embedUR/Module2/Q4$ ps -eo pid,comm,%mem --sort=-%mem | head -2
+    PID COMMAND         %MEM
+   5006 gnome-shell     10.0
+jeeva@JEEVA:~/embedUR/Module2/Q4$ cat code.sh
+process=$(ps -eo pid,comm,%mem --sort=-%mem | awk 'NR==2{print $1}')  
+
+if [ -n "$process" ]; then  
+    echo "Process with the highest memory usage (PID: $process):"  
+    ps -p $process -o pid,comm,%mem    
+    echo "Terminating process $process..."  
+    kill -9 $process  
+    if [ $? -eq 0 ]; then  
+        echo "Process $process terminated successfully."  
+    else  
+        echo "Failed to terminate process $process."  
+    fi  
+else  
+    echo "No processes found."  
+fi
+jeeva@JEEVA:~/embedUR/Module2/Q4$ ./code.sh > output.txt
+
+jeeva@JEEVA:~/embedUR/Module2/Q4$ cat output.txt
+Process with the highest memory usage (PID: 5006):
+    PID COMMAND         %MEM
+   5006 gnome-shell     10.0
+Terminating process 5006...
+Process 5006 terminated successfully.
+
+
+jeeva@JEEVA:~/embedUR/Module2/Q4$ top -o %MEM | head -n 8
+
+top - 23:00:55 up 19 min,  1 user,  load average: 0.18, 0.27, 0.45
+Tasks: 192 total,   1 running, 191 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 25.0 us, 25.0 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi, 50.0 si,  0.0 st 
+MiB Mem :   3916.5 total,   2186.4 free,   1014.3 used,    980.6 buff/cache     
+MiB Swap:   3916.0 total,   3916.0 free,      0.0 used.   2902.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  
+   2838 jeeva     20   0 3502992 383824 143980 S   0.0   9.6   1:38.54 gnome-s+ 
+jeeva@JEEVA:~/embedUR/Module2/Q4$ cat mem_code.sh
+process=$(top -b -o %MEM | head -n 8 | awk 'NR==8{print $1}')
+
+if [ -n "$process" ]; then  
+    echo "Process with the highest memory usage (PID: $process):"  
+    ps -p $process -o pid,comm,%mem    
+    echo "Terminating process $process..."  
+    kill -9 $process  
+    if [ $? -eq 0 ]; then  
+        echo "Process $process terminated successfully."  
+    else  
+        echo "Failed to terminate process $process."  
+    fi  
+else  
+    echo "No processes found."  
+fi
+jeeva@JEEVA:~/embedUR/Module2/Q4$ chmod +x mem_code.sh
+jeeva@JEEVA:~/embedUR/Module2/Q4$ ./mem_code.sh > output2.txt
+
+jeeva@JEEVA:~/embedUR/Module2/Q4$ ls
+code.sh  mem_code.sh  output2.txt  output.txt
+jeeva@JEEVA:~/embedUR/Module2/Q4$ cat output.txt
+Process with the highest memory usage (PID: 5006):
+    PID COMMAND         %MEM
+   5006 gnome-shell     10.0
+Terminating process 5006...
+Process 5006 terminated successfully.
+
+
