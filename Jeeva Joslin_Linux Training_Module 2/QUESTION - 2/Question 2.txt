@@ -1,0 +1,18 @@
+jeeva@JEEVA:~/embedUR/Module2/Q2$ ping localhost > config.txt
+^Cjeeva@JEEVA:~/embedUR/Module2/Q2$ cat config.txt
+PING localhost (127.0.0.1) 56(84) bytes of data.
+64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.312 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 time=0.033 ms
+
+--- localhost ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 0.033/0.172/0.312/0.139 ms
+jeeva@JEEVA:~/embedUR/Module2/Q2$ sed 's/localhost/127.0.0.1/g' config.txt > updated_config.txt
+jeeva@JEEVA:~/embedUR/Module2/Q2$ cat updated_config.txt
+PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
+64 bytes from 127.0.0.1 (127.0.0.1): icmp_seq=1 ttl=64 time=0.312 ms
+64 bytes from 127.0.0.1 (127.0.0.1): icmp_seq=2 ttl=64 time=0.033 ms
+
+--- 127.0.0.1 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 0.033/0.172/0.312/0.139 ms
