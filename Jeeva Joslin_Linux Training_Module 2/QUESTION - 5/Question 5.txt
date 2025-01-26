@@ -1,3 +1,5 @@
+5) Use the networking tool command and print all the gateway available in a sorted manner
+
 jeeva@JEEVA:~/embedUR/Module2/Q5$ netstat -r
 Kernel IP routing table
 Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
