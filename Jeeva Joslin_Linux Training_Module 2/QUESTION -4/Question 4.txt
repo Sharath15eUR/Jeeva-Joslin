@@ -35,3 +35,39 @@ Process with the highest memory usage (PID: 5006):
    5006 gnome-shell     10.0
 Terminating process 5006...
 Process 5006 terminated successfully.
+
+jeeva@JEEVA:~/embedUR/Module2/Q4$ cat output.txt
+Process with the highest memory usage (PID: 3143):
+    PID COMMAND         %MEM
+   3143 gnome-shell      9.8
+Terminating process 3143...
+Process 3143 terminated successfully.
+
+
+jeeva@JEEVA:~/embedUR/Module2/Q4$ ps -eo pid,comm,%mem --sort=-%mem | head -2
+    PID COMMAND         %MEM
+   5006 gnome-shell     10.0
+jeeva@JEEVA:~/embedUR/Module2/Q4$ cat code.sh
+process=$(ps -eo pid,comm,%mem --sort=-%mem | awk 'NR==2{print $1}')  
+
+if [ -n "$process" ]; then  
+    echo "Process with the highest memory usage (PID: $process):"  
+    ps -p $process -o pid,comm,%mem    
+    echo "Terminating process $process..."  
+    kill -9 $process  
+    if [ $? -eq 0 ]; then  
+        echo "Process $process terminated successfully."  
+    else  
+        echo "Failed to terminate process $process."  
+    fi  
+else  
+    echo "No processes found."  
+fi
+jeeva@JEEVA:~/embedUR/Module2/Q4$ ./code.sh > output.txt
+
+jeeva@JEEVA:~/embedUR/Module2/Q4$ cat output.txt
+Process with the highest memory usage (PID: 5006):
+    PID COMMAND         %MEM
+   5006 gnome-shell     10.0
+Terminating process 5006...
+Process 5006 terminated successfully.
