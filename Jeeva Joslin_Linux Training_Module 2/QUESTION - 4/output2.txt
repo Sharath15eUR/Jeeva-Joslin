@@ -1,8 +1,0 @@
-jeeva@JEEVA:~/embedUR/Module2/Q4$ ls
-code.sh  mem_code.sh  output2.txt  output.txt
-jeeva@JEEVA:~/embedUR/Module2/Q4$ cat output.txt
-Process with the highest memory usage (PID: 5006):
-    PID COMMAND         %MEM
-   5006 gnome-shell     10.0
-Terminating process 5006...
-Process 5006 terminated successfully.
