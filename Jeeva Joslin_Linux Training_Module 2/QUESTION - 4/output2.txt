@@ -1,0 +1,6 @@
+jeeva@JEEVA:~/embedUR/Module2/Q4$ cat output2.txt
+Process with the highest memory usage (PID: 2838):
+    PID COMMAND         %MEM
+   2838 gnome-shell      9.5
+Terminating process 2838...
+Process 2838 terminated successfully.
