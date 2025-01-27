@@ -1,13 +1,5 @@
 4) Write a code to identify the process with the highest memory usage and then terminate it.
 
-jeeva@JEEVA:~/embedUR/Module2/Q4$ cat output.txt
-Process with the highest memory usage (PID: 3143):
-    PID COMMAND         %MEM
-   3143 gnome-shell      9.8
-Terminating process 3143...
-Process 3143 terminated successfully.
-
-
 jeeva@JEEVA:~/embedUR/Module2/Q4$ ps -eo pid,comm,%mem --sort=-%mem | head -2
     PID COMMAND         %MEM
    5006 gnome-shell     10.0
