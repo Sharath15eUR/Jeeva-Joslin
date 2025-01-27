@@ -100,64 +100,57 @@
 
 ### 2) **Replace all occurrences of "localhost" with "127.0.0.1" in a configuration file named config.txt, and save the updated file as updated_config.txt.**
 
-1. To create a text file with the name `config.txt` and add the output of `ping localhost`:
-   ```
-   ping localhost > config.txt
-   ```
-2. `config.txt`:
+1. `config.txt`:
 
    ```
-   PING localhost (127.0.0.1) 56(84) bytes of data.
-   64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.312 ms
-   64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 time=0.033 ms
-
-   --- localhost ping statistics ---
-   2 packets transmitted, 2 received, 0% packet loss, time 1001ms
-   rtt min/avg/max/mdev = 0.033/0.172/0.312/0.139 ms
+   server = localhost
+   database_host = localhost
+   port = 3306
+   api_url = http://localhost:8080
+   log_path = /var/log/localhost
+   timeout = 30
    ```
 
-3. To replace the all occurrences of `localhost` with `127.0.0.1` ans store the output in a file named `updated_config.txt`:
+2. To replace the all occurrences of `localhost` with `127.0.0.1` ans store the output in a file named `updated_config.txt`:
    ```
    sed 's/localhost/127.0.0.1/g' config.txt > updated_config.txt
    ```
-4. `updated_config.txt`:
+3. `updated_config.txt`:
 
    ```
-   PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
-   64 bytes from 127.0.0.1 (127.0.0.1): icmp_seq=1 ttl=64 time=0.312 ms
-   64 bytes from 127.0.0.1 (127.0.0.1): icmp_seq=2 ttl=64 time=0.033 ms
-
-   --- 127.0.0.1 ping statistics ---
-   2 packets transmitted, 2 received, 0% packet loss, time 1001ms
-   rtt min/avg/max/mdev = 0.033/0.172/0.312/0.139 ms
+   server = 127.0.0.1
+   database_host = 127.0.0.1
+   port = 3306
+   api_url = http://127.0.0.1:8080
+   log_path = /var/log/127.0.0.1
+   timeout = 30
    ```
 
-5. CLI:
+4. CLI:
 
    ```
 
-   jeeva@JEEVA:~/embedUR/Module2/Q2$ ping localhost > config.txt
-   ^Cjeeva@JEEVA:~/embedUR/Module2/Q2$ cat config.txt
-   PING localhost (127.0.0.1) 56(84) bytes of data.
-   64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.312 ms
-   64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 time=0.033 ms
-
-   --- localhost ping statistics ---
-   2 packets transmitted, 2 received, 0% packet loss, time 1001ms
-   rtt min/avg/max/mdev = 0.033/0.172/0.312/0.139 ms
+   jeeva@JEEVA:~/embedUR/Module2/Q2$ cat config.txt
+   server = localhost
+   database_host = localhost
+   port = 3306
+   api_url = http://localhost:8080
+   log_path = /var/log/localhost
+   timeout = 30
    jeeva@JEEVA:~/embedUR/Module2/Q2$ sed 's/localhost/127.0.0.1/g' config.txt > updated_config.txt
    jeeva@JEEVA:~/embedUR/Module2/Q2$ cat updated_config.txt
-   PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
-   64 bytes from 127.0.0.1 (127.0.0.1): icmp_seq=1 ttl=64 time=0.312 ms
-   64 bytes from 127.0.0.1 (127.0.0.1): icmp_seq=2 ttl=64 time=0.033 ms
-
-   --- 127.0.0.1 ping statistics ---
-   2 packets transmitted, 2 received, 0% packet loss, time 1001ms
-   rtt min/avg/max/mdev = 0.033/0.172/0.312/0.139 ms
+   server = 127.0.0.1
+   database_host = 127.0.0.1
+   port = 3306
+   api_url = http://127.0.0.1:8080
+   log_path = /var/log/127.0.0.1
+   timeout = 30
    ```
 
-6. Screenshot:
-   ![QUESTION - 2](https://github.com/user-attachments/assets/5d91d345-0ff7-42af-b130-df9a0cd4c0a6)
+5. Screenshot:
+   ![QUESTION - 2](https://github.com/user-attachments/assets/6cc55a8f-6950-4f1b-8f87-861593adc6bc)
+
+   
 
 
 ### 3) **Use the appropriate command to search for lines containing the word "ERROR" in a log file but exclude lines containing "DEBUG". Save the results to a file named filtered_log.txt.**
