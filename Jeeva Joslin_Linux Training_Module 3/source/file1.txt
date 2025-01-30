@@ -1,0 +1,86 @@
+Skip to content
+
+Command in Line
+
+du Cheat Sheet - du Command Line Guide
+The du (disk usage) command in Linux is used to estimate and display the amount of disk space used by files and directories. It provides detailed information about how much space a directory or file is consuming. This command is particularly useful for monitoring storage space and identifying which files or directories are taking up the most space.
+
+
+Commonly Used Parameters and Their Meanings
+du
+Description: Displays the disk usage for all files and subdirectories within the current directory.
+Usage: Basic disk usage check.
+du -h
+Description: Displays disk usage in human-readable format, using units like KB, MB, or GB.
+Usage: Easier to interpret disk usage data.
+du -s
+Description: Summarizes disk usage for the current directory, showing only the total size.
+Usage: Useful for getting a quick summary of disk usage.
+du -sh
+Description: Summarizes disk usage in human-readable format for the current directory.
+Usage: Provides an easy-to-read summary of disk usage.
+du -a
+Description: Displays disk usage for all files, not just directories.
+Usage: Useful for identifying space usage by individual files.
+du -d 1
+Description: Displays the disk usage for the current directory and one level of subdirectories.
+Usage: Helpful for identifying which top-level directories are using the most space.
+du --max-depth=2
+Description: Displays disk usage up to two levels deep in the directory structure.
+Usage: Useful for controlling how much detail is shown in deeper directory trees.
+du -c
+Description: Displays a grand total for all files and directories at the end of the output.
+Usage: Useful for seeing the total disk usage across all listed files and directories.
+du Command Cheat Sheet
+Option	Description	Example
+du	Displays disk usage for directories and subdirectories	du
+-h	Human-readable format (e.g., KB, MB, GB)	du -h
+-s	Summarizes disk usage for the current directory	du -s
+-sh	Summarizes disk usage in human-readable format	du -sh
+-a	Displays disk usage for all files, not just directories	du -a
+-d 1	Limits the output to one level of subdirectories	du -d 1
+--max-depth=2	Limits the depth of directory levels shown	du --max-depth=2
+-c	Displays a grand total of disk usage	du -c
+Conclusion
+The du command is an essential tool for monitoring and managing disk space in Linux. Whether you’re summarizing disk usage or exploring how much space individual files and directories consume, du provides flexibility and detailed information. By mastering its various options, users can effectively identify and manage disk space usage, ensuring optimal storage performance in any Linux environment.
+
+
+Linux
+List Directory Contents in Linux
+Here’s a detailed overview of various ways to list directory contents in Linux, emphasizing different…
+
+linux-commands-cheat-sheet-with-examples
+Linux
+Linux Commands Cheat Sheet With Examples [Best List]
+Linux lets you quickly, effectively, and in your own special way complete chores. It is…
+
+
+Linux
+Common Linux System Monitoring Commands
+Linux offers a variety of system monitoring commands that provide real-time insights into the performance…
+
+
+Linux
+Common Linux Disk Management Commands
+Disk management in Linux involves handling storage devices, creating and managing partitions, formatting disks, and…
+
+
+Linux
+Common Linux Directory Commands
+Here are some common Linux directory commands along with examples for better understanding: 1. pwd…
+
+
+Linux
+Common Linux File Commands
+Common Linux file commands refer to the set of commands used to manage, manipulate, and…
+
+Archives
+October 2024
+September 2024
+Categories
+Linux
+Copyright © 2025 Command in Line
+
+Design by ThemesDNA.com
+
+Scroll to Top

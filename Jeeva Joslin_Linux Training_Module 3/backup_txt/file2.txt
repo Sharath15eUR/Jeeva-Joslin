@@ -1,0 +1,51 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\Jeeva Joslin\Desktop\Module-3Source file> py -m http
+C:\Users\Jeeva Joslin\AppData\Local\Programs\Python\Python312\python.exe: No module named http.__main__; 'http' is a package and cannot be directly executed
+PS C:\Users\Jeeva Joslin\Desktop\Module-3Source file> py -m http.server
+Serving HTTP on :: port 8000 (http://[::]:8000/) ...
+::ffff:192.168.56.1 - - [30/Jan/2025 13:54:43] "GET / HTTP/1.1" 200 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:54:43] code 404, message File not found
+::ffff:192.168.56.1 - - [30/Jan/2025 13:54:43] "GET /favicon.ico HTTP/1.1" 404 -
+
+Keyboard interrupt received, exiting.
+PS C:\Users\Jeeva Joslin\Desktop\Module-3Source file> cd ..
+PS C:\Users\Jeeva Joslin\Desktop> py -m http.server
+Serving HTTP on :: port 8000 (http://[::]:8000/) ...
+::ffff:192.168.56.1 - - [30/Jan/2025 13:55:22] "GET / HTTP/1.1" 200 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:55:22] code 404, message File not found
+::ffff:192.168.56.1 - - [30/Jan/2025 13:55:22] "GET /favicon.ico HTTP/1.1" 404 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:55:26] "GET /Module-3Source%20file/ HTTP/1.1" 200 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:55:28] "GET /Module-3Source%20file/Bee%20Colony%20Optimization.pdf HTTP/1.1" 200 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:55:29] code 400, message Bad request version ('üÎ©5Y\\x01)é\\x88Ià>Øx\\x98ê\\x15À\\x8a[£`¹\\x08\\x90\\x12õÃ\\x00"\\x13\\x01\\x13\\x03\\x13\\x02À+À/Ì©Ì¨À,À0À')
+::ffff:192.168.56.1 - - [30/Jan/2025 13:55:29] "\x16\x03\x01\x07K\x01\x00\x07G\x03\x03^¤o>óÒÛ\x8c$¨(À\x9fÁ\x97^\x9a  R+«ÊÑH½YO\x88\x82ãÎ ¸\\Ë\x09üÎ©5Y\x01)é\x88Ià>Øx\x98ê\x15À\x8a[£`¹\x08\x90\x12õÃ\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À" 400 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:55:29] code 400, message Bad HTTP/0.9 request type ('\\x16\\x03\\x01\\x02z\\x01\\x00\\x02v\\x03\\x03G@ÙÇ')
+::ffff:192.168.56.1 - - [30/Jan/2025 13:55:29] "\x16\x03\x01\x02z\x01\x00\x02v\x03\x03G@ÙÇ Ç\x96\x0f²ï\x8cÿ¾2)°Vhj#^Y\x84`?MÑ(" 400 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:55:46] "GET /Module-3Source%20file/ HTTP/1.1" 200 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:55:50] code 400, message Bad request version ('=AiYkÈ5pf\\x18j_8²b\\x0e\\x84:wÿÂÙóN\\x966\\x0fx[dN%\\x00"\\x13\\x01\\x13\\x03\\x13\\x02À+À/Ì©Ì¨À,À0À')
+::ffff:192.168.56.1 - - [30/Jan/2025 13:55:50] "\x16\x03\x01\x07K\x01\x00\x07G\x03\x03ã\x04(ð\x12]m;ö²RõÙz°¬v¶=\x88Ã\x17\x1a[H Ùiã\x09ê× =AiYkÈ5pf\x18j_8²b\x0e\x84:wÿÂÙóN\x966\x0fx[dN%\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À" 400 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:55:50] code 400, message Bad request version ('\\x00"\\x13\\x01\\x13\\x03\\x13\\x02À+À/Ì©Ì¨À,À0À')
+::ffff:192.168.56.1 - - [30/Jan/2025 13:55:50] "\x16\x03\x01\x02z\x01\x00\x02v\x03\x03îÁ\x12§*4$²HÎ\x15\x93ø\x18\x070ýÀÈôg|\x0f1EÞ#S\x88ÒÅQ H\x09\x1bÂì Dö>\x0c!´¬ÄËûø¸\x80tÛWf\x97ÜºÝ0¸\x8aO \x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À" 400 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:56:43] "GET /Module-3Source%20file/Federated%20Learning.pdf HTTP/1.1" 200 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:56:44] code 400, message Bad request version ('\\x81ÊÚl@E\\x84\\x8c½\\x00"\\x13\\x01\\x13\\x03\\x13\\x02À+À/Ì©Ì¨À,À0À')
+::ffff:192.168.56.1 - - [30/Jan/2025 13:56:44] "\x16\x03\x01\x07K\x01\x00\x07G\x03\x03â]7U\x82fßA\\HZ\x8cÐhM\x01\x09ãÒX\x13^YdI\x10\x92Ô\x05?\x081 <\x99Ð%§\x0dì-\x89Ñ+·\x87ï<=F)ûSfÄ\x1d\x81ÊÚl@E\x84\x8c½\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À" 400 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:56:44] code 400, message Bad request version ('í#È')
+::ffff:192.168.56.1 - - [30/Jan/2025 13:56:44] "\x16\x03\x01\x02z\x01\x00\x02v\x03\x03Òfvõ\x08¦ª)\x890]Ì\x1fÆæ\x8b~Ò­Âýì\x09)6 í#È" 400 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:57:06] "GET /Module-3Source%20file/Finance%20v1.pdf HTTP/1.1" 200 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:57:06] code 400, message Bad HTTP/0.9 request type ('\\x16\\x03\\x01\\x07K\\x01\\x00\\x07G\\x03\\x03º´åæï\\x8f\\x80ÈáM<¡9<\\x92\\x95?>\\x8bda.Y\\x98¹Ö\\x82ø¢ûù$')
+::ffff:192.168.56.1 - - [30/Jan/2025 13:57:06] "\x16\x03\x01\x07K\x01\x00\x07G\x03\x03º´åæï\x8f\x80ÈáM<¡9<\x92\x95?>\x8bda.Y\x98¹Ö\x82ø¢ûù$ \x14È­\x93\x82\x11\x91Y:\x87Ãd\x9dÙk\x00?}\x08lÍûTì¥{ýõ\x97\x92\x8b¯\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À" 400 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:57:06] code 400, message Bad request version ('¹0k\\x11\\x19ÂÙA\\x14ZD®WQl>è(\\x1191\\x97\\xadÍN·ÿÄíIfS\\x00"\\x13\\x01\\x13\\x03\\x13\\x02À+À/Ì©Ì¨À,À0À')
+::ffff:192.168.56.1 - - [30/Jan/2025 13:57:06] "\x16\x03\x01\x02z\x01\x00\x02v\x03\x03_w;¦\x08©\x17hÓFêj©ú\x1bÒª@é(øf\x16 \x81iHÅ)\\\x1dí ¹0k\x11\x19ÂÙA\x14ZD®WQl>è(\x1191\x97­ÍN·ÿÄíIfS\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À" 400 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:57:24] "GET /Module-3Source%20file/ID.pdf HTTP/1.1" 200 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:57:24] code 400, message Bad HTTP/0.9 request type ('\\x16\\x03\\x01\\x07K\\x01\\x00\\x07G\\x03\\x03W\\x14%+°®U\\x84\\x0e\\x1a\\x1alLëp\\x8eb©\\x14/\\x99ÓÊÙ\\x87Ás\\\\\\x9eä¡¡')
+::ffff:192.168.56.1 - - [30/Jan/2025 13:57:24] "\x16\x03\x01\x07K\x01\x00\x07G\x03\x03W\x14%+°®U\x84\x0e\x1a\x1alLëp\x8eb©\x14/\x99ÓÊÙ\x87Ás\\\x9eä¡¡ ±Åê\x15ÅsÈLZt\x8eúF1¡/\x91:N}\x16é³\x8c\x13ÔG£A%Æg\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À" 400 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:57:24] code 400, message Bad request version ('@ÌËÆ`¼kSn\\x0fe7émÙPìêåfaáQþØ\\x0eI\\x1b\\x9eáíQ\\x00"\\x13\\x01\\x13\\x03\\x13\\x02À+À/Ì©Ì¨À,À0À')
+::ffff:192.168.56.1 - - [30/Jan/2025 13:57:24] "\x16\x03\x01\x02z\x01\x00\x02v\x03\x03æ\x8cÿû\x9a\\¯è\x1b¡VÒ²\x84lw\x9cþû\x81û\x80p­Ú6;Ò\x83C\x0cd @ÌËÆ`¼kSn\x0fe7émÙPìêåfaáQþØ\x0eI\x1b\x9eáíQ\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À" 400 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:57:42] "GET /Module-3Source%20file/Linux.pdf HTTP/1.1" 200 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:57:42] code 400, message Bad request version ('yWXJR\\x8d\\x91l\\\\Ù\\x13l\\'\\x10ã\\x82vDÑ\\x8cµÔ³jzäë\\x17XD1\\x81\\x00"\\x13\\x01\\x13\\x03\\x13\\x02À+À/Ì©Ì¨À,À0À')
+::ffff:192.168.56.1 - - [30/Jan/2025 13:57:42] "\x16\x03\x01\x07K\x01\x00\x07G\x03\x03\x1fÞ\x01ò\x08;\x04Ûð}:Y»éÓ\x9fôÎ\x8d»)\x1fß·\x10j\x07,AìíP yWXJR\x8d\x91l\\Ù\x13l'\x10ã\x82vDÑ\x8cµÔ³jzäë\x17XD1\x81\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À" 400 -
+::ffff:192.168.56.1 - - [30/Jan/2025 13:57:42] code 400, message Bad request version ('v¨ý\\x18]ý\\x9füaXÆ+È^è\\x14\\x15\\x98ó!\\x00"\\x13\\x01\\x13\\x03\\x13\\x02À+À/Ì©Ì¨À,À0À')
+::ffff:192.168.56.1 - - [30/Jan/2025 13:57:42] "\x16\x03\x01\x02z\x01\x00\x02v\x03\x03íÅÍ×B\x98\x9an\x1c\x9bv`W2U\x1bE ¢]e÷ne\x9d\x96\x8a,\x01\x83[. G\x0cÙ°ò\x8a$\x92®I¿\x1fv¨ý\x18]ý\x9füaXÆ+È^è\x14\x15\x98ó!\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À" 400 -
