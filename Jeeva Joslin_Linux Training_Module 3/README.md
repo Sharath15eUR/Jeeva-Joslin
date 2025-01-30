@@ -131,5 +131,120 @@ echo "Final BACKUP_COUNT: $BACKUP_COUNT"
 # Child Process 
 ./child_script.sh
 ```
-###
+## Tests
+### Given Invalid number of arguments:
+![MODULE 3](https://github.com/user-attachments/assets/bc2964b7-5c0c-4cf4-8b5c-c43fd33baf4c)
+
+### Backup Directory does not exist.Backup of pdf files:
+![MODULE-4A](https://github.com/user-attachments/assets/23e3868a-c1a2-4f0e-b034-344b725a99e2)
+CLI
+```
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3$ ./backup_manager.sh "/home/jeeva-joslin/source" backup_pdf ".pdf"
+Backup directory does not exist. Created backup directory at /home/jeeva-joslin/embedUR/Module3/backup_pdf
+Files to be backed up:
+Federated_Learning.pdf -- 1044931 bytes
+Financev1.pdf -- 306654 bytes
+ID.pdf -- 711635 bytes
+Linux.pdf -- 1348978 bytes
+Optimization.pdf -- 1871706 bytes
+Backing up Federated_Learning.pdf
+Backing up Financev1.pdf
+Backing up ID.pdf
+Backing up Linux.pdf
+Backing up Optimization.pdf
+Backup completed. Generating report...
+Backup completed successfully. Report saved to backup_pdf/backup_report.log
+Final BACKUP_COUNT: 5
+BACKUP_COUNT checking from child script: 5
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3$ cd backup_pdf/
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3/backup_pdf$ ls
+backup_report.log  Federated_Learning.pdf  Financev1.pdf  ID.pdf  Linux.pdf  Optimization.pdf
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3/backup_pdf$ cat backup_report.log
+Backup Report
+-----------------
+Total files processed: 5
+Total size of files backed up: 5283904 bytes
+Backup directory: backup_pdf
+Report generated at: Thu Jan 30 03:21:42 PM IST 2025
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3/backup_pdf$
+```
+### Backup Directory exists and backup of text files:
+![MODULE 4  TXT FILE BACKUP1](https://github.com/user-attachments/assets/b8bc2346-caff-4a08-9e0e-1375f736a09c)
+![MODULE 4  BACKUP TXT FILE OVERWRITE](https://github.com/user-attachments/assets/9a68b10e-671c-4ead-8e35-b7c347e7b8dd)
+CLI
+```
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3$ ls
+backup_manager.sh  backup_pdf  child_script.sh
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3$ mkdir backup_txt
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3$ ls
+backup_manager.sh  backup_pdf  backup_txt  child_script.sh
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3$ ./backup_manager.sh "/home/jeeva-joslin/source" backup_txt ".txt"
+Files to be backed up:
+file1.txt -- 3738 bytes
+file2.txt -- 7285 bytes
+file3.txt -- 23 bytes
+file4.txt -- 23 bytes
+Backing up file1.txt
+Backing up file2.txt
+Backing up file3.txt
+Backing up file4.txt
+Backup completed. Generating report...
+Backup completed successfully. Report saved to backup_txt/backup_report.log
+Final BACKUP_COUNT: 4
+BACKUP_COUNT checking from child script: 4
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3$ cd backup_txt
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3/backup_txt$ ls
+backup_report.log  file1.txt  file2.txt  file3.txt  file4.txt
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3/backup_txt$ cat backup_report.log
+Backup Report
+-----------------
+Total files processed: 4
+Total size of files backed up: 11069 bytes
+Backup directory: backup_txt
+Report generated at: Thu Jan 30 03:26:25 PM IST 2025
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3/backup_txt$ cat file3.txt
+First update in file 3
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3/backup_txt$ cd /home/jeeva-joslin/source
+jeeva-joslin@jeeva-joslin-VirtualBox:~/source$ ls
+ENSEMBLE-checkpoint.ipynb  Federated_Learning.pdf  file1.txt  file2.txt  file3.txt  file4.txt  file6  Financev1.pdf  ID.pdf  Linux.pdf  Optimization.pdf
+jeeva-joslin@jeeva-joslin-VirtualBox:~/source$ cat file3.txt
+First update in file 3
+jeeva-joslin@jeeva-joslin-VirtualBox:~/source$ vi file3.txt
+jeeva-joslin@jeeva-joslin-VirtualBox:~/source$ cat file3.txt
+First update in file 3
+Second Update in file 3
+jeeva-joslin@jeeva-joslin-VirtualBox:~/source$ cd /home/jeeva-joslin/embedUR/Module3
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3$ ./backup_manager.sh "/home/jeeva-joslin/source" backup_txt ".txt"
+Files to be backed up:
+file1.txt -- 3738 bytes
+file2.txt -- 7285 bytes
+file3.txt -- 47 bytes
+file4.txt -- 23 bytes
+Skipping file1.txt (backup file is up to date)
+Skipping file2.txt (backup file is up to date)
+Overwriting file3.txt in backup directory (source file is newer)
+Skipping file4.txt (backup file is up to date)
+Backup completed. Generating report...
+Backup completed successfully. Report saved to backup_txt/backup_report.log
+Final BACKUP_COUNT: 1
+BACKUP_COUNT checking from child script: 1
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3$ cd backup_txt
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3/backup_txt$ ls
+backup_report.log  file1.txt  file2.txt  file3.txt  file4.txt
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3/backup_txt$ cat file3.txt
+First update in file 3
+Second Update in file 3
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3/backup_txt$ cat backup_report.log
+Backup Report
+-----------------
+Total files processed: 1
+Total size of files backed up: 11093 bytes
+Backup directory: backup_txt
+Report generated at: Thu Jan 30 03:29:41 PM IST 2025
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module3/backup_txt$ 
+```
+### Source Directory does not have matching files:
+![MODULE 4c](https://github.com/user-attachments/assets/00085c3f-d4e3-4995-a030-641e5b568c21)
+
+
 
