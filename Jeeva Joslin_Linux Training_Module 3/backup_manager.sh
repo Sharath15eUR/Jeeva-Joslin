@@ -98,4 +98,4 @@ echo "Backup completed successfully. Report saved to $REPORT_FILE"
 # Check the final value of BACKUP_COUNT
 echo "Final BACKUP_COUNT: $BACKUP_COUNT"
 # Child Process 
-./b3.sh
+./child_script.sh
