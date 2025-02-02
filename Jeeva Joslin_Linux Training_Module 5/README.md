@@ -20,6 +20,26 @@
                '-f <file>': File to search directly.
                '--help': Display the help menu.
 
+               
+### Folder Structure
+
+        ├── errors.log
+        ├── file_analyzer.sh
+        ├── logs
+        │   ├── backup_folder
+        │   │   ├── backup
+        │   │   │   ├── backup_report.log
+        │   │   │   ├── file1.txt
+        │   │   │   ├── file2.txt
+        │   │   │   ├── file3.txt
+        │   │   │   └── file4.txt
+        │   │   └── backup_report.log
+        │   ├── backup_manager.sh
+        │   └── child_script.sh
+        └── script.sh
+        
+        4 directories, 11 files
+
 ### Screenshots
 
 ![MODULE 5](https://github.com/user-attachments/assets/3a81be86-89ef-4da7-87e9-a93408ff6c98)
