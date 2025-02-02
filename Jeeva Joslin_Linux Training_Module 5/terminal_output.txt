@@ -1,0 +1,56 @@
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module5$ ls
+file_analyzer.sh  logs
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module5$ ./file_analyzer.sh -d logs -k size
+Found 'size' in 'logs/backup_folder/backup/backup_report.log'
+Found 'size' in 'logs/backup_folder/backup/file1.txt'
+Keyword 'size' not found in 'logs/backup_folder/backup/file2.txt'
+Keyword 'size' not found in 'logs/backup_folder/backup/file3.txt'
+Keyword 'size' not found in 'logs/backup_folder/backup/file4.txt'
+Found 'size' in 'logs/backup_folder/backup_report.log'
+Found 'size' in 'logs/backup_manager.sh'
+Keyword 'size' not found in 'logs/child_script.sh'
+-----------------------------------
+Script name: ./file_analyzer.sh
+Number of arguments: 4
+Exit status of the last command: 0
+All arguments: -d logs -k size
+-----------------------------------
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module5$ ./file_analyzer.sh -f script -k word
+Error: File 'script' does not exist.
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module5$ ./file_analyzer.sh -f script.sh -k word
+Found 'word' in 'script.sh'
+-----------------------------------
+Script name: ./file_analyzer.sh
+Number of arguments: 4
+Exit status of the last command: 0
+All arguments: -f script.sh -k word
+-----------------------------------
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module5$ vi script.sh
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module5$ ./file_analyzer.sh -f script -k word
+Error: File 'script' does not exist.
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module5$ ./file_analyzer.sh -f script.sh -k word
+Found 'word' in 'script.sh'
+-----------------------------------
+Script name: ./file_analyzer.sh
+Number of arguments: 4
+Exit status of the last command: 0
+All arguments: -f script.sh -k word
+-----------------------------------
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module5$ ls
+errors.log  file_analyzer.sh  logs  script.sh
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module5$ cat errors.log
+Error: File 'script' does not exist.
+jeeva-joslin@jeeva-joslin-VirtualBox:~/embedUR/Module5$ ./file_analyzer.sh --help
+Usage: ./file_analyzer.sh [options]
+Options:
+    -d <directory>   Directory to search
+    -k <keyword>     Keyword to search
+    -f <file>        File to search directly
+    --help           Display this help menu
+Example usage:
+    # Recursively search a directory for a keyword
+    ./file_analyzer.sh -d logs -k error
+    # Search for a keyword in a file
+    ./file_analyzer.sh -f script.sh -k TODO
+    # Display the help menu
+    ./file_analyzer.sh --help
