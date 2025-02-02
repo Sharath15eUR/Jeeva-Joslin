@@ -5,7 +5,7 @@
 
 ### Linux Training Assessments 
 
-#### [Assessment 1: Introduction to Linux OS, Architecture, and Kernel](Jeeva%20Joslin_Linux%20Training_Module%205/Assessment_1.md)
+#### [Assessment 1: Introduction to Linux OS, Architecture, and Kernel](Jeeva Joslin_Linux Training_Module 1)
 
 #### [Assessment 2: The Linux Environment](Jeeva%20Joslin_Linux%20Training_Module%205/Assessment_2.md)
 
