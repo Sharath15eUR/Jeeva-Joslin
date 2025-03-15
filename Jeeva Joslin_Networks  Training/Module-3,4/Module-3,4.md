@@ -130,19 +130,102 @@ I used Wireshark to capture and analyze Ethernet frames while simulating network
             TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 
+## 4-7.Troubleshoot Ethernet Communication with ping and traceroute -> Using cisco packet tracer: • Create a simple LAN setup with two Linux machines connected via a switch. • Ping from one machine to the other. If it fails, use ifconfig to ensure the IP addresses are configured correctly. • Use traceroute to identify where the packets are being dropped if the ping fails. 
+
+I used two PCs (PC0 and PC1) and connected them through a switch. I assigned 192.168.1.1 to PC0 and 192.168.1.2 to PC1 with the same subnet mask. First, I checked the IP configuration using ipconfig to verify the settings. Then, I used ping 192.168.1.1 from PC1, and it successfully received replies, confirming connectivity. Next, I checked the ARP table with arp -a, which showed PC0’s MAC address, meaning both PCs could communicate. Finally, I used tracert 192.168.1.1 on PC1, and it showed a direct connection in one hop, proving that my network setup was working correctly. 
+
+
+    Cisco Packet Tracer PC Command Line 1.0
+    C:\>ipconfig
+    
+    FastEthernet0 Connection:(default port)
+    
+       Connection-specific DNS Suffix..: 
+       Link-local IPv6 Address.........: FE80::290:21FF:FE13:2C89
+       IPv6 Address....................: ::
+       IPv4 Address....................: 192.168.1.2
+       Subnet Mask.....................: 255.255.255.0
+       Default Gateway.................: ::
+                                         0.0.0.0
+    
+    Bluetooth Connection:
+    
+       Connection-specific DNS Suffix..: 
+       Link-local IPv6 Address.........: ::
+       IPv6 Address....................: ::
+       IPv4 Address....................: 0.0.0.0
+       Subnet Mask.....................: 0.0.0.0
+       Default Gateway.................: ::
+                                         0.0.0.0
+    
+    C:\>ping 192.168.1.1
+    
+    Pinging 192.168.1.1 with 32 bytes of data:
+    
+    Reply from 192.168.1.1: bytes=32 time=17ms TTL=128
+    Reply from 192.168.1.1: bytes=32 time<1ms TTL=128
+    Reply from 192.168.1.1: bytes=32 time<1ms TTL=128
+    Reply from 192.168.1.1: bytes=32 time<1ms TTL=128
+    
+    Ping statistics for 192.168.1.1:
+        Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+    Approximate round trip times in milli-seconds:
+        Minimum = 0ms, Maximum = 17ms, Average = 4ms
+    
+    C:\>arp -a
+      Internet Address      Physical Address      Type
+      192.168.1.1           00d0.58c3.28aa        dynamic
+    
+    C:\>tracert 192.168.1.1
+    
+    Tracing route to 192.168.1.1 over a maximum of 30 hops: 
+    
+      1   21 ms     0 ms      0 ms      192.168.1.1
+    
+    Trace complete.
+
+
+![Screenshot (280)](https://github.com/user-attachments/assets/82663009-7f1f-483b-b2ae-a9cdfab623e1)
+
+
+![Screenshot (281)](https://github.com/user-attachments/assets/21d634f7-5840-4299-89c7-485bf72f2032)
+
+
+
+
+![Screenshot (282)](https://github.com/user-attachments/assets/79dfc6ba-f7ab-40de-b79d-7cfda9131a61)
 
 
 
 
 
+![Screenshot (283)](https://github.com/user-attachments/assets/59be7917-9f23-48c3-b4ed-2ad916a2bf4e)
 
 
 
 
+## 8-9.Research the Linux kernel's handling of Ethernet devices and network interfaces. Write a short report on how the Linux kernel supports Ethernet communication (referencing kernel.org documentation). • Describe how you would configure a basic LAN interface using the ip command in Linux (kernel.org). 
+
+The Linux kernel manages Ethernet communication through network interface drivers, protocol handling, and packet processing. It supports Ethernet adapters using drivers like e1000 and r8169, while implementing networking protocols such as IPv4, IPv6, and ARP. The kernel processes packets using Netfilter (iptables, nftables) and enables dynamic/static IP configuration using tools like ip and ifconfig. To configure a basic LAN interface, assign an IP using sudo ip addr add 192.168.1.2/24 dev eth0, enable it with sudo ip link set eth0 up, and verify settings via ip addr show eth0.A default gateway can be set using sudo ip route add default via 192.168.1.1.
 
 
 
 
+## 10.Use Linux to view the MAC address table of a switch (if using a Linux-based network switch). Use the bridge or ip link commands to inspect the MAC table and demonstrate a basic switch's operation.
 
 
+    jeeva@jeeva:~$ sudo bridge fdb show
+    01:00:5e:00:00:01 dev enp0s3 self permanent
+    33:33:00:00:00:01 dev enp0s3 self permanent
+    33:33:ff:46:c7:e9 dev enp0s3 self permanent
+    01:00:5e:00:00:fb dev enp0s3 self permanent
+    33:33:00:00:00:fb dev enp0s3 self permanent
+    jeeva@jeeva:~$ ip link show
+    1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+        link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+        link/ether 08:00:27:46:c7:e9 brd ff:ff:ff:ff:ff:ff
+    jeeva@jeeva:~$ 
 
+
+The sudo bridge fdb show command displays the MAC address forwarding table, showing which MAC addresses are associated with the enp0s3 network interface. These entries help the system forward packets to the right destination. The ip link show command lists the available network interfaces, including the loopback (lo) and the Ethernet interface (enp0s3). The enp0s3 interface is active (UP), supports broadcasting and multicasting, and has a MAC address of 08:00:27:46:c7:e9. This confirms that the interface is functional and ready to communicate over the network.
