@@ -35,7 +35,95 @@ I modified PC2’s MAC address to match the Router’s MAC address, making PC2 a
 
 
 
+## 3) Manually configure static IPs on the client devices(like Pc or your mobile phone) and verify connectivity using ping.
 
+    jeeva@jeeva:~$ ifconfig
+    enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+            inet 192.168.1.100  netmask 255.255.255.0  broadcast 192.168.1.255
+            inet6 fe80::a00:27ff:fe46:c7e9  prefixlen 64  scopeid 0x20<link>
+            ether 08:00:27:46:c7:e9  txqueuelen 1000  (Ethernet)
+            RX packets 1  bytes 590 (590.0 B)
+            RX errors 0  dropped 0  overruns 0  frame 0
+            TX packets 92  bytes 10723 (10.7 KB)
+            TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+    
+    lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+            inet 127.0.0.1  netmask 255.0.0.0
+            inet6 ::1  prefixlen 128  scopeid 0x10<host>
+            loop  txqueuelen 1000  (Local Loopback)
+            RX packets 128  bytes 13601 (13.6 KB)
+            RX errors 0  dropped 0  overruns 0  frame 0
+            TX packets 128  bytes 13601 (13.6 KB)
+            TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+    
+    jeeva@jeeva:~$ ip a
+    1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+        link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+        inet 127.0.0.1/8 scope host lo
+           valid_lft forever preferred_lft forever
+        inet6 ::1/128 scope host noprefixroute 
+           valid_lft forever preferred_lft forever
+    2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+        link/ether 08:00:27:46:c7:e9 brd ff:ff:ff:ff:ff:ff
+        inet 192.168.1.100/24 brd 192.168.1.255 scope global noprefixroute enp0s3
+           valid_lft forever preferred_lft forever
+        inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+           valid_lft 86363sec preferred_lft 86363sec
+        inet6 fe80::a00:27ff:fe46:c7e9/64 scope link 
+           valid_lft forever preferred_lft forever
+    jeeva@jeeva:~$ sudo ipconfig enp0s3 192.168.1.20 netmask 255.255.255.0 up
+    [sudo] password for jeeva: 
+    sudo: ipconfig: command not found
+    jeeva@jeeva:~$ sudo ifconfig enp0s3 192.168.1.20 netmask 255.255.255.0 up
+    jeeva@jeeva:~$ ip a
+    1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+        link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+        inet 127.0.0.1/8 scope host lo
+           valid_lft forever preferred_lft forever
+        inet6 ::1/128 scope host noprefixroute 
+           valid_lft forever preferred_lft forever
+    2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+        link/ether 08:00:27:46:c7:e9 brd ff:ff:ff:ff:ff:ff
+        inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+           valid_lft 86216sec preferred_lft 86216sec
+        inet 192.168.1.20/24 brd 192.168.1.255 scope global noprefixroute enp0s3
+           valid_lft forever preferred_lft forever
+        inet6 fe80::a00:27ff:fe46:c7e9/64 scope link 
+           valid_lft forever preferred_lft forever
+    jeeva@jeeva:~$ ifconfig
+    enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+            inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+            inet6 fe80::a00:27ff:fe46:c7e9  prefixlen 64  scopeid 0x20<link>
+            ether 08:00:27:46:c7:e9  txqueuelen 1000  (Ethernet)
+            RX packets 1  bytes 590 (590.0 B)
+            RX errors 0  dropped 0  overruns 0  frame 0
+            TX packets 246  bytes 21235 (21.2 KB)
+            TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+    
+    lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+            inet 127.0.0.1  netmask 255.0.0.0
+            inet6 ::1  prefixlen 128  scopeid 0x10<host>
+            loop  txqueuelen 1000  (Local Loopback)
+            RX packets 272  bytes 28037 (28.0 KB)
+            RX errors 0  dropped 0  overruns 0  frame 0
+            TX packets 272  bytes 28037 (28.0 KB)
+            TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+    
+    jeeva@jeeva:~$ ping 192.168.1.20
+    PING 192.168.1.20 (192.168.1.20) 56(84) bytes of data.
+    64 bytes from 192.168.1.20: icmp_seq=1 ttl=64 time=0.050 ms
+    64 bytes from 192.168.1.20: icmp_seq=2 ttl=64 time=0.044 ms
+    64 bytes from 192.168.1.20: icmp_seq=3 ttl=64 time=0.030 ms
+    64 bytes from 192.168.1.20: icmp_seq=4 ttl=64 time=0.031 ms
+    64 bytes from 192.168.1.20: icmp_seq=5 ttl=64 time=0.026 ms
+    ^C
+    --- 192.168.1.20 ping statistics ---
+    5 packets transmitted, 5 received, 0% packet loss, time 4012ms
+    rtt min/avg/max/mdev = 0.026/0.036/0.050/0.009 ms
+    jeeva@jeeva:~$ 
+
+
+## 4)4) Use Wireshark to capture DHCP Discover, Offer, Request, and Acknowledge messages and explain the process. 
 
 
 
