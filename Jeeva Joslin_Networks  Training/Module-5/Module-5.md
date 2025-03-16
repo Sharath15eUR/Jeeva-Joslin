@@ -1,4 +1,4 @@
-![Screenshot (284)](https://github.com/user-attachments/assets/a4ab1533-25ee-4c2f-bce0-bb2c39b0c36d)# Module -5 Assignment
+# Module -5 Assignment
 
 ## 1) Capture and analyze ARP packets using Wireshark. Inspect the ARP request and reply frames, and discuss the role of the sender's IP and MAC address in these packets. 
 
