@@ -144,4 +144,27 @@ The DHCP process follows four steps called DORA: Discover, Offer, Request, and A
 ## 5)Given an IP address range of 192.168.1.0/24, divide the network into 4 subnets. Task: Manually calculate the new subnet mask and the range of valid IP addresses for each subnet. Assign IP addresses from these subnets to devices in Cisco Packet Tracer and verify connectivity using ping between them.
 
 
+The original /24 subnet (255.255.255.0) has 256 total addresses (0-255).
+We need 4 subnets, so we borrow 2 bits from the host portion:
+
+New Subnet Mask: /26 (255.255.255.192)
+Each subnet has 64 addresses (2⁶ = 64).
+Usable IPs per subnet: 62 (since 2 are reserved for network ID and broadcast).
+
+Now, divide the network 192.168.1.0/24 into 4 subnets of /26:
+
+Subnet	    Network ID	        Usable IP Range	                Broadcast Address
+Subnet 1	192.168.1.0/26    	192.168.1.1 - 192.168.1.62	    192.168.1.63
+Subnet 2	192.168.1.64/26	    192.168.1.65 - 192.168.1.126	192.168.1.127
+Subnet 3	192.168.1.128/26	192.168.1.129 - 192.168.1.190	192.168.1.191
+Subnet 4	192.168.1.192/26	192.168.1.193 - 192.168.1.254	192.168.1.255
+
+Assign IPs in Cisco Packet Tracer
+Assign IP addresses to devices in each subnet:
+
+Subnet 1: PC1 → 192.168.1.10, PC2 → 192.168.1.20
+Subnet 2: PC3 → 192.168.1.70, PC4 → 192.168.1.80
+Subnet 3: PC5 → 192.168.1.130, PC6 → 192.168.1.140
+Subnet 4: PC7 → 192.168.1.200, PC8 → 192.168.1.210
+Set the subnet mask to 255.255.255.192 for all devices.
 
