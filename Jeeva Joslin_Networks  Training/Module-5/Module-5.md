@@ -201,10 +201,12 @@ IP Address    	Class	    Default Subnet         Mask	Class Range
 
 ## 7)In Cisco Packet Tracer, create a small network with multiple devices (e.g., 2 PCs and a router). Use private IP addresses (e.g., 192.168.1.x) on the PCs and configure the router to perform NAT to allow the PCs to access the internet. Task: Test the NAT configuration by pinging an external IP address from the PCs and capture the traffic using Wireshark. What is the source IP address before and after NAT? 
 
+![Screenshot (305)](https://github.com/user-attachments/assets/956fb3a7-61a6-4ea9-a23a-0e9f813afc5c)
 
 
 
 
+![Screenshot (306)](https://github.com/user-attachments/assets/394e287c-f851-4572-9a3a-cacf581bb66d)
 
 
 
