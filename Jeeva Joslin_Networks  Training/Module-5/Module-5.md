@@ -161,10 +161,25 @@ Subnet 4	192.168.1.192/26	192.168.1.193 - 192.168.1.254	192.168.1.255
 
 Assign IPs in Cisco Packet Tracer
 Assign IP addresses to devices in each subnet:
-
-Subnet 1: PC1 → 192.168.1.10, PC2 → 192.168.1.20
-Subnet 2: PC3 → 192.168.1.70, PC4 → 192.168.1.80
-Subnet 3: PC5 → 192.168.1.130, PC6 → 192.168.1.140
-Subnet 4: PC7 → 192.168.1.200, PC8 → 192.168.1.210
 Set the subnet mask to 255.255.255.192 for all devices.
+Subnet 1 (192.168.1.0/26)
+PC1: 192.168.1.10, Subnet Mask: 255.255.255.192, Gateway: 192.168.1.1
+PC2: 192.168.1.20, Subnet Mask: 255.255.255.192, Gateway: 192.168.1.1
+Subnet 2 (192.168.1.64/26)
+PC3: 192.168.1.70, Subnet Mask: 255.255.255.192, Gateway: 192.168.1.65
+PC4: 192.168.1.80, Subnet Mask: 255.255.255.192, Gateway: 192.168.1.65
+Subnet 3 (192.168.1.128/26)
+PC5: 192.168.1.130, Subnet Mask: 255.255.255.192, Gateway: 192.168.1.129
+PC6: 192.168.1.140, Subnet Mask: 255.255.255.192, Gateway: 192.168.1.129
+Subnet 4 (192.168.1.192/26)
+PC7: 192.168.1.200, Subnet Mask: 255.255.255.192, Gateway: 192.168.1.193
+PC8: 192.168.1.210, Subnet Mask: 255.255.255.192, Gateway: 192.168.1.193
+
+
+
+
+
+
+
+
 
