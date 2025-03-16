@@ -177,6 +177,29 @@ PC8: 192.168.1.210, Subnet Mask: 255.255.255.192, Gateway: 192.168.1.193
 
 
 
+![Screenshot (302)](https://github.com/user-attachments/assets/30433564-75ce-4d99-903f-bfe534d98589)
+
+![Screenshot (303)](https://github.com/user-attachments/assets/81a5b57d-f855-4dd0-a12b-1259fa639c63)
+
+
+![Screenshot (304)](https://github.com/user-attachments/assets/acf4a0c2-9467-44c3-b5b4-b7891ca0574a)
+
+![Screenshot 2025-03-16 125218](https://github.com/user-attachments/assets/6cc3a7b7-f3df-4c18-b6e7-614c1cd58bcb)
+
+![Screenshot 2025-03-16 133006](https://github.com/user-attachments/assets/8ae3c60f-3040-471a-a1b5-45da976687d6)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
