@@ -190,9 +190,16 @@ PC8: 192.168.1.210, Subnet Mask: 255.255.255.192, Gateway: 192.168.1.193
 
 
 
+## 6)You are given three IP addresses: 10.1.1.1, 172.16.5.10, and 192.168.1.5. Task: Identify the class of each IP address (Class A, B, or C). What is the default subnet mask for each class? Provide the range of IP addresses for each class.
+
+IP Address    	Class	    Default Subnet         Mask	Class Range
+10.1.1.1	    A	        255.0.0.0	           1.0.0.0 – 126.255.255.255
+172.16.5.10	    B	        255.255.0.0	           128.0.0.0 – 191.255.255.255
+192.168.1.5	    C	        255.255.255.0	       192.0.0.0 – 223.255.255.255
 
 
 
+## 7)In Cisco Packet Tracer, create a small network with multiple devices (e.g., 2 PCs and a router). Use private IP addresses (e.g., 192.168.1.x) on the PCs and configure the router to perform NAT to allow the PCs to access the internet. Task: Test the NAT configuration by pinging an external IP address from the PCs and capture the traffic using Wireshark. What is the source IP address before and after NAT? 
 
 
 
