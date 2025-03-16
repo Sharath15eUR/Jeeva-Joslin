@@ -123,7 +123,25 @@ I modified PC2’s MAC address to match the Router’s MAC address, making PC2 a
     jeeva@jeeva:~$ 
 
 
-## 4)4) Use Wireshark to capture DHCP Discover, Offer, Request, and Acknowledge messages and explain the process. 
+## 4) Use Wireshark to capture DHCP Discover, Offer, Request, and Acknowledge messages and explain the process. 
+
+
+The DHCP process follows four steps called DORA: Discover, Offer, Request, and Acknowledge. When a device connects to a network, it first sends a DHCP Discover message to find a DHCP server. The server responds with a DHCP Offer, providing an available IP address. The device then sends a DHCP Request to confirm its selection of the offered IP. Finally, the server sends a DHCP Acknowledge, confirming the lease and assigning the IP to the device. 
+
+![Screenshot (298)](https://github.com/user-attachments/assets/6a80fbfe-2d6c-47f5-a4cd-5c924c636a82)
+
+
+![Screenshot (299)](https://github.com/user-attachments/assets/6f2ffef2-4a5e-47ff-b5b1-7d3caab3048a)
+
+
+![Screenshot (300)](https://github.com/user-attachments/assets/ee565ccc-9f3c-467a-b265-cc34516d8169)
+
+
+![Screenshot (301)](https://github.com/user-attachments/assets/6c5ae326-3095-417e-9ac2-fc36b44e4aa7)
+
+
+
+## 5)Given an IP address range of 192.168.1.0/24, divide the network into 4 subnets. Task: Manually calculate the new subnet mask and the range of valid IP addresses for each subnet. Assign IP addresses from these subnets to devices in Cisco Packet Tracer and verify connectivity using ping between them.
 
 
 
