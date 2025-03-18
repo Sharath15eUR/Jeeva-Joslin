@@ -88,15 +88,27 @@ I first configure VLANs on both switches, ensuring that PCs are assigned to the 
 
 ## 9)
 
+![Screenshot 2025-03-18 160346](https://github.com/user-attachments/assets/5740b88a-b645-4582-a71b-fdc11b1a94b2)
+
+![Screenshot 2025-03-18 160429](https://github.com/user-attachments/assets/b1d07ffd-6903-4569-aabe-3aee7b2808f4)
+
+![Screenshot 2025-03-18 160658](https://github.com/user-attachments/assets/7e8fef7f-5700-453e-8f6e-ec2316fcbb6d)
+
+
+## 10)
+
+![Screenshot 2025-03-18 164215](https://github.com/user-attachments/assets/e2b3e7a9-29a4-4f69-8541-6a62046f62e2)
+
+
+![Screenshot 2025-03-18 164226](https://github.com/user-attachments/assets/41e051d5-67ae-4878-b9af-3cf13d5520b8)
+
+
+![Screenshot 2025-03-18 164247](https://github.com/user-attachments/assets/53302002-793f-4d33-97d3-85d993e1ed52)
+![Screenshot 2025-03-18 164303](https://github.com/user-attachments/assets/b9238ced-6cab-4e07-b81b-80715daa5ded)
 
 
 
-
-
-
-
-
-
+## 11)
 
 
 
