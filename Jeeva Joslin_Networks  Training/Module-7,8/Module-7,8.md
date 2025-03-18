@@ -21,9 +21,10 @@
 
 I first configure VLANs on both switches, ensuring that PCs are assigned to the correct VLANs. Then, I set up a trunk link between the switches to allow multiple VLANs to communicate. Next, I assign appropriate IP addresses and default gateways to the PCs, ensuring they are in the correct subnet. Since VLANs cannot communicate directly, I enable IP routing on a Layer 3 switch and configure VLAN interfaces with the correct IP addresses. Finally, I test connectivity using the ping command, verifying that devices in different VLANs can successfully communicate.
 
-![Uploading Screenshot 2025-03-18 121444.png…]()
+![Screenshot 2025-03-18 121444](https://github.com/user-attachments/assets/e45e44a9-467c-497a-a807-9c12e494b8c7)
 
-![Uploading Screenshot 2025-03-18 121642.png…]()
+![Screenshot 2025-03-18 121642](https://github.com/user-attachments/assets/83e76b86-693a-4f18-8f7c-9aa2e2e10b3d)
+
 
 ![Screenshot 2025-03-18 121654](https://github.com/user-attachments/assets/71c3d06d-4dcc-4f89-b3d7-734eb2a3379d)
 
@@ -36,18 +37,19 @@ I first configure VLANs on both switches, ensuring that PCs are assigned to the 
 ![Screenshot 2025-03-18 121856](https://github.com/user-attachments/assets/68e35f72-5bd3-40e2-9f9c-24cfda539974)
 
 
-![Uploading Screenshot 2025-03-18 124330.png…]()
-
+![Screenshot 2025-03-18 124330](https://github.com/user-attachments/assets/1d10fb2d-128e-4ffa-92cf-84ff65f136f9)
 
 
 ## 5)
 
+![Screenshot 2025-03-18 130347](https://github.com/user-attachments/assets/f59f4fc6-a533-4e3e-8ae5-eec80a16ab78)
+
+![Screenshot 2025-03-18 130430](https://github.com/user-attachments/assets/ec00a842-bfcf-4f3d-92d6-9dcdb8ffa058)
 
 
 
 
-
-
+## 6)
 
 
 
