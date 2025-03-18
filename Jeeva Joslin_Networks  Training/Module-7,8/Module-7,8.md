@@ -40,7 +40,7 @@ I first configure VLANs on both switches, ensuring that PCs are assigned to the 
 
 
 
-## 4)
+## 5)
 
 
 
