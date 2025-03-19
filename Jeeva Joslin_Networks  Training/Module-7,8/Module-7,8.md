@@ -281,6 +281,7 @@ I first configure VLANs on both switches, ensuring that PCs are assigned to the 
 
 ## 14)Try Static NAT, Dynamic NAT and PAT to translate IPs
 
+![Screenshot 2025-03-19 103200](https://github.com/user-attachments/assets/b778c16f-7beb-4010-9f9e-4bbcf3c568cf)
 
 
 ## 15)Download iperf in laptop/phone and make sure they are in same network. Try different iperf commands with tcp, udp, birectional, reverse, multicast, parallel options and analyze the bandwidth and rate of transmission, delay, jitter etc. 
