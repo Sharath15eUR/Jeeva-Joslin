@@ -1,11 +1,12 @@
 # Module - 7,8 ASSIGNMENT
 
-## 1)
+## 1)Try Test-Connection and nslookup commands for below websites www.google.com www.facebook.com www.amazon.com www.github.com www.cisco.com
 
 
 
 
-## 2)
+
+## 2)Use Wireshark to capture and analyze DNS, TCP, UDP traffic and packet header, packet flow, options and flags
 
 ![Screenshot 2025-03-18 102300](https://github.com/user-attachments/assets/2ceb4e6a-d5e7-422b-b60a-3113fcf88976)
 
@@ -17,8 +18,13 @@
 
 ![Screenshot 2025-03-18 102908](https://github.com/user-attachments/assets/e3a0b126-73d7-46c1-84b7-125c14520668)
 
-## 3)
+## 3)Explore traceroute/tracert for different websites eg:google.com and analyse the parameters in the output and explore different options for traceroute command 
 
+
+
+## 4)Use Cisco packet tracer for the below 
+
+## 5)Set up trunk ports between switches and try ping between different VLANs. 
 I first configure VLANs on both switches, ensuring that PCs are assigned to the correct VLANs. Then, I set up a trunk link between the switches to allow multiple VLANs to communicate. Next, I assign appropriate IP addresses and default gateways to the PCs, ensuring they are in the correct subnet. Since VLANs cannot communicate directly, I enable IP routing on a Layer 3 switch and configure VLAN interfaces with the correct IP addresses. Finally, I test connectivity using the ping command, verifying that devices in different VLANs can successfully communicate.
 
 ![Screenshot 2025-03-18 121444](https://github.com/user-attachments/assets/e45e44a9-467c-497a-a807-9c12e494b8c7)
@@ -40,7 +46,9 @@ I first configure VLANs on both switches, ensuring that PCs are assigned to the 
 ![Screenshot 2025-03-18 124330](https://github.com/user-attachments/assets/1d10fb2d-128e-4ffa-92cf-84ff65f136f9)
 
 
-## 5)
+
+
+
 
 ![Screenshot 2025-03-18 130347](https://github.com/user-attachments/assets/f59f4fc6-a533-4e3e-8ae5-eec80a16ab78)
 
@@ -49,7 +57,7 @@ I first configure VLANs on both switches, ensuring that PCs are assigned to the 
 
 
 
-## 6)
+## 6)Change the native VLAN on a trunk port.Test for VLAN mismatches and troubleshoot. 
 
 
 ![Screenshot 2025-03-18 133639](https://github.com/user-attachments/assets/aa888273-5628-4fff-8d51-ed41fe2c25c6)
@@ -68,7 +76,7 @@ I first configure VLANs on both switches, ensuring that PCs are assigned to the 
 
 
 
-## 7)
+## 7)Configure a management VLAN and assign an IP address for remote access.Test SSH or Telnet access to the switch.
 ![Screenshot 2025-03-18 155517](https://github.com/user-attachments/assets/a8a79c90-f726-4376-8adc-eea230c1c0a7)
 
 
@@ -76,7 +84,7 @@ I first configure VLANs on both switches, ensuring that PCs are assigned to the 
 
 
 
-## 8)
+## 8)You have a Cisco switch and a VoIP phone that needs to be placed in a voice VLAN (VLAN 20). The data for the PC should remain in a separate VLAN (VLAN 10). Configure the switch port to support both voice and data traffic. 
 ![Screenshot 2025-03-18 160346](https://github.com/user-attachments/assets/84fea2db-3d6a-423c-856b-3d5c2c5dafbb)
 
 ![Screenshot 2025-03-18 160429](https://github.com/user-attachments/assets/61401bcb-140f-47a2-908e-8b20fb171a30)
@@ -86,7 +94,7 @@ I first configure VLANs on both switches, ensuring that PCs are assigned to the 
 
 
 
-## 9)
+## 9)You configured VLANs 10 and 20 on your switch and assigned ports to each VLAN. However, devices in VLAN 10 cannot communicate with devices in VLAN 20. Troubleshoot the issue.
 
 ![Screenshot 2025-03-18 160346](https://github.com/user-attachments/assets/5740b88a-b645-4582-a71b-fdc11b1a94b2)
 
@@ -95,7 +103,7 @@ I first configure VLANs on both switches, ensuring that PCs are assigned to the 
 ![Screenshot 2025-03-18 160658](https://github.com/user-attachments/assets/7e8fef7f-5700-453e-8f6e-ec2316fcbb6d)
 
 
-## 10)
+## 10)Try Inter VLAN routing with Router 
 
 ![Screenshot 2025-03-18 164215](https://github.com/user-attachments/assets/e2b3e7a9-29a4-4f69-8541-6a62046f62e2)
 
@@ -108,7 +116,25 @@ I first configure VLANs on both switches, ensuring that PCs are assigned to the 
 
 
 
-## 11)
+## 11)Implement ACLs to restrict traffic based on source and destination ports.Test rules by simulating legitimate and unauthorized traffic. 
+
+
+
+## 12)Configure a standard Access Control List (ACL) on a router to permit traffic from a specific IP range.Test connectivity to verify the ACL is working as intended.
+
+
+
+## 13)Create an extended ACL to block specific applications, such as HTTP or FTP traffic.Test the ACL rules by attempting to access blocked services. 
+
+
+
+
+## 14)Try Static NAT, Dynamic NAT and PAT to translate IPs
+
+
+
+## 15)Download iperf in laptop/phone and make sure they are in same network. Try different iperf commands with tcp, udp, birectional, reverse, multicast, parallel options and analyze the bandwidth and rate of transmission, delay, jitter etc. 
+
 
 
 
