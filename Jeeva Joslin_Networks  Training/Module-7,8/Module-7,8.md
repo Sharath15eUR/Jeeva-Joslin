@@ -267,6 +267,16 @@ I first configure VLANs on both switches, ensuring that PCs are assigned to the 
 ## 13)Create an extended ACL to block specific applications, such as HTTP or FTP traffic.Test the ACL rules by attempting to access blocked services. 
 
 
+![Screenshot 2025-03-19 100158](https://github.com/user-attachments/assets/69c3d074-6003-4056-838d-5173dda1aac9)
+
+
+![Screenshot 2025-03-19 100211](https://github.com/user-attachments/assets/1a4222bc-ab4a-4312-84e9-e1194ad90f92)
+
+![Screenshot 2025-03-19 100224](https://github.com/user-attachments/assets/935f18e6-4731-415a-ae88-9ad542ef2dfc)
+
+
+
+
 
 
 ## 14)Try Static NAT, Dynamic NAT and PAT to translate IPs
