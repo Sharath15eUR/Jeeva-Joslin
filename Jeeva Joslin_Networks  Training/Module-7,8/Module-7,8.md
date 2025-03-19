@@ -1,4 +1,4 @@
-# Module - 7,8 ASSIGNMENT
+![Screenshot 2025-03-19 095312](https://github.com/user-attachments/assets/01e35235-87d3-4aa3-b569-b9e92b81c122)# Module - 7,8 ASSIGNMENT
 
 ## 1)Try Test-Connection and nslookup commands for below websites www.google.com www.facebook.com www.amazon.com www.github.com www.cisco.com
 
@@ -257,6 +257,12 @@ I first configure VLANs on both switches, ensuring that PCs are assigned to the 
 ## 12)Configure a standard Access Control List (ACL) on a router to permit traffic from a specific IP range.Test connectivity to verify the ACL is working as intended.
 
 
+
+![Screenshot 2025-03-19 095312](https://github.com/user-attachments/assets/c3f18fd6-e960-4d56-a972-e7de593c85f9)
+
+![Screenshot 2025-03-19 095358](https://github.com/user-attachments/assets/f9031114-0e1a-45b1-bbc0-f5baa57513a0)
+
+![Screenshot 2025-03-19 095415](https://github.com/user-attachments/assets/69aa8a19-6625-4164-abcd-b6d89200219e)
 
 ## 13)Create an extended ACL to block specific applications, such as HTTP or FTP traffic.Test the ACL rules by attempting to access blocked services. 
 
