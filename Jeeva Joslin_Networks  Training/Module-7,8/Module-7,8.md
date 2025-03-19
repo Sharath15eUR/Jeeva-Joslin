@@ -2,6 +2,113 @@
 
 ## 1)Try Test-Connection and nslookup commands for below websites www.google.com www.facebook.com www.amazon.com www.github.com www.cisco.com
 
+    PS C:\Users\Jeeva Joslin> Test-Connection www.google.com -Count 4
+    
+    Source        Destination     IPV4Address      IPV6Address                              Bytes    Time(ms)
+    ------        -----------     -----------      -----------                              -----    --------
+    JEEVA-JOSLIN  www.google.com  142.250.193.68                                            32       43
+    JEEVA-JOSLIN  www.google.com  142.250.193.68                                            32       124
+    JEEVA-JOSLIN  www.google.com  142.250.193.68                                            32       158
+    JEEVA-JOSLIN  www.google.com  142.250.193.68                                            32       317
+    
+    
+    PS C:\Users\Jeeva Joslin> Test-Connection www.facebook.com -Count 4
+    
+    Source        Destination     IPV4Address      IPV6Address                              Bytes    Time(ms)
+    ------        -----------     -----------      -----------                              -----    --------
+    JEEVA-JOSLIN  www.facebook... 57.144.146.1                                              32       44
+    JEEVA-JOSLIN  www.facebook... 57.144.146.1                                              32       42
+    JEEVA-JOSLIN  www.facebook... 57.144.146.1                                              32       45
+    JEEVA-JOSLIN  www.facebook... 57.144.146.1                                              32       42
+    
+    
+    PS C:\Users\Jeeva Joslin> Test-Connection www.amazon.com -Count 4
+    
+    Source        Destination     IPV4Address      IPV6Address                              Bytes    Time(ms)
+    ------        -----------     -----------      -----------                              -----    --------
+    JEEVA-JOSLIN  www.amazon.com  23.210.77.132                                             32       7
+    JEEVA-JOSLIN  www.amazon.com  23.210.77.132                                             32       9
+    JEEVA-JOSLIN  www.amazon.com  23.210.77.132                                             32       19
+    JEEVA-JOSLIN  www.amazon.com  23.210.77.132                                             32       98
+    
+    
+    PS C:\Users\Jeeva Joslin> Test-Connection www.github.com -Count 4
+    
+    Source        Destination     IPV4Address      IPV6Address                              Bytes    Time(ms)
+    ------        -----------     -----------      -----------                              -----    --------
+    JEEVA-JOSLIN  www.github.com  20.207.73.82                                              32       26
+    JEEVA-JOSLIN  www.github.com  20.207.73.82                                              32       24
+    JEEVA-JOSLIN  www.github.com  20.207.73.82                                              32       30
+    JEEVA-JOSLIN  www.github.com  20.207.73.82                                              32       73
+    
+    
+    PS C:\Users\Jeeva Joslin> Test-Connection www.cisco.com -Count 4
+    
+    Source        Destination     IPV4Address      IPV6Address                              Bytes    Time(ms)
+    ------        -----------     -----------      -----------                              -----    --------
+    JEEVA-JOSLIN  www.cisco.com   23.209.254.61                                             32       7
+    JEEVA-JOSLIN  www.cisco.com   23.209.254.61                                             32       9
+    JEEVA-JOSLIN  www.cisco.com   23.209.254.61                                             32       13
+    JEEVA-JOSLIN  www.cisco.com   23.209.254.61                                             32       41
+    
+    
+    PS C:\Users\Jeeva Joslin> nslookup www.google.com
+    Server:  UnKnown
+    Address:  192.168.0.1
+    
+    Non-authoritative answer:
+    Name:    www.google.com
+    Addresses:  2404:6800:4002:817::2004
+              142.250.183.100
+    
+    PS C:\Users\Jeeva Joslin> nslookup www.facebook.com
+    Server:  UnKnown
+    Address:  192.168.0.1
+    
+    Non-authoritative answer:
+    Name:    star-mini.c10r.facebook.com
+    Addresses:  2a03:2880:f34e:1:face:b00c:0:25de
+              57.144.122.1
+    Aliases:  www.facebook.com
+    
+    PS C:\Users\Jeeva Joslin> nslookup www.amazon.com
+    Server:  UnKnown
+    Address:  192.168.0.1
+    
+    Non-authoritative answer:
+    Name:    www-amazon-com.customer.fastly.net
+    Addresses:  2606:2cc0:2::374
+              2606:2cc0:3::374
+              2606:2cc0::374
+              2606:2cc0:1::374
+              162.219.225.118
+    Aliases:  www.amazon.com
+              tp.47cf2c8c9-frontier.amazon.com
+    
+    PS C:\Users\Jeeva Joslin> nslookup www.github.com
+    Server:  UnKnown
+    Address:  192.168.0.1
+    
+    Non-authoritative answer:
+    Name:    github.com
+    Address:  20.207.73.82
+    Aliases:  www.github.com
+    
+    PS C:\Users\Jeeva Joslin> nslookup www.cisco.com
+    Server:  UnKnown
+    Address:  192.168.0.1
+    
+    Non-authoritative answer:
+    Name:    e2867.dsca.akamaiedge.net
+    Addresses:  2600:140f:6:1a7::b33
+              2600:140f:6:18a::b33
+              23.213.214.90
+    Aliases:  www.cisco.com
+              www.cisco.com.akadns.net
+              wwwds.cisco.com.edgekey.net
+              wwwds.cisco.com.edgekey.net.globalredir.akadns.net
+    
+    PS C:\Users\Jeeva Joslin>
 
 
 
