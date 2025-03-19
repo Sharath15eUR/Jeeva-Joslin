@@ -126,7 +126,28 @@
 ![Screenshot 2025-03-18 102908](https://github.com/user-attachments/assets/e3a0b126-73d7-46c1-84b7-125c14520668)
 
 ## 3)Explore traceroute/tracert for different websites eg:google.com and analyse the parameters in the output and explore different options for traceroute command 
-
+        PS C:\Users\Jeeva Joslin Y> tracert google.com
+        
+        Tracing route to google.com [142.250.191.78]
+        over a maximum of 30 hops:
+        
+          1    11 ms     4 ms     9 ms  192.168.128.1
+          2     2 ms     3 ms     5 ms  192.168.139.67
+          3     6 ms     4 ms     3 ms  static-201.140.16.61-tataidc.co.in [61.16.140.201]
+          4     4 ms     4 ms     5 ms  142.250.171.162
+          5     5 ms     4 ms     4 ms  142.251.227.217
+          6     4 ms     3 ms     3 ms  142.251.230.70
+          7    36 ms    35 ms    36 ms  142.251.229.223
+          8    63 ms    63 ms    63 ms  192.178.108.168
+          9   353 ms   198 ms   194 ms  108.170.228.156
+         10   201 ms   201 ms   203 ms  142.251.68.57
+         11   202 ms   201 ms   204 ms  74.125.253.191
+         12   201 ms   201 ms   201 ms  192.178.105.99
+         13   200 ms   202 ms   215 ms  142.251.224.31
+         14   200 ms   407 ms   200 ms  nuq04s43-in-f14.1e100.net [142.250.191.78]
+        
+        Trace complete.
+        PS C:\Users\Jeeva Joslin Y>
 
 
 ## 4)Use Cisco packet tracer for the below 
@@ -224,6 +245,12 @@ I first configure VLANs on both switches, ensuring that PCs are assigned to the 
 
 
 ## 11)Implement ACLs to restrict traffic based on source and destination ports.Test rules by simulating legitimate and unauthorized traffic. 
+
+
+![Screenshot 2025-03-19 094618](https://github.com/user-attachments/assets/86aadeb6-cf54-4698-b8b2-9eb646f5b098)
+
+
+![Screenshot 2025-03-19 094634](https://github.com/user-attachments/assets/6afc55f3-3266-490d-8f10-9eddd695852d)
 
 
 
