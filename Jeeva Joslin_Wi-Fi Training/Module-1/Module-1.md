@@ -114,12 +114,12 @@ Extending Wi-Fi range in large homes or buildings without adding new network seg
 
 ## 6.What are the differences between 802.11a and 802.11b.
 
-Feature	                    802.11a                                                          	802.11b
-Frequency Band	            5 GHz	                                                            2.4 GHz
-Speed (Max Data Rate)	      54 Mbps	                                                          11 Mbps
-Modulation Technique	      OFDM (Orthogonal Frequency Division Multiplexing)	                DSSS (Direct Sequence Spread Spectrum)
-Range                       Shorter                                                           Longer 
-Interference	              Less interference                                               	More interference 
-Used in                     Enterprise & professional settings	                              Consumer/home networks
-Cost	                      Higher                                                            Lower 
+    Feature	                    802.11a                                                          	802.11b
+    Frequency Band	            5 GHz	                                                            2.4 GHz
+    Speed (Max Data Rate)	      54 Mbps	                                                          11 Mbps
+    Modulation Technique	      OFDM (Orthogonal Frequency Division Multiplexing)	                DSSS (Direct Sequence Spread Spectrum)
+    Range                       Shorter                                                           Longer 
+    Interference	              Less interference                                               	More interference 
+    Used in                     Enterprise & professional settings	                              Consumer/home networks
+    Cost	                      Higher                                                            Lower 
 
