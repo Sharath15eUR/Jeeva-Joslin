@@ -59,4 +59,59 @@ Prioritizes traffic types (e.g., voice, video, best effort, background) using Wi
 Supports 802.11 Power Save Mode to reduce battery consumption on client devices.
 Uses Target Wake Time (TWT) (Wi-Fi 6 feature) to schedule wake-up times for IoT devices.
 
-## 5)
+## 5) Difference between Bridge mode and Repeater mode.
+
+### Bridge Mode
+
+Function: Connects two separate networks (wired or wireless) to act as a single network.
+
+Key Features:
+
+Operates at Layer 2 (Data Link Layer) of the OSI model.
+
+Used to connect two different LANs (Local Area Networks).
+
+Doesn’t create a new Wi-Fi signal; instead, it extends a network via Ethernet or wireless connection.
+
+Commonly used in businesses to link two buildings’ networks.
+
+Example: A Wi-Fi bridge connects two offices over a long-distance wireless link.
+
+Types of Bridge Mode:
+
+Wireless Bridge: Uses Wi-Fi to connect two LANs without cables.
+
+Wired Bridge: Uses an Ethernet connection to link networks.
+
+Use Case:
+
+Connecting two separate networks while maintaining different SSIDs and network configurations.
+
+### Repeater Mode
+Function: Extends an existing Wi-Fi signal to increase coverage.
+
+Key Features:
+
+Works at Layer 1 (Physical Layer).
+
+Captures an existing Wi-Fi signal and rebroadcasts it.
+
+Uses the same SSID and password as the main network.
+
+Reduces speed since data is retransmitted.
+
+Ideal for expanding coverage in a home or office where the signal is weak.
+
+Types of Repeaters:
+
+Wi-Fi Extender (Repeater): Repeats the existing signal but can cause some latency.
+
+Mesh Wi-Fi System: A more advanced form of repeating with better efficiency.
+
+Use Case:
+
+Extending Wi-Fi range in large homes or buildings without adding new network segments.
+
+
+
+
