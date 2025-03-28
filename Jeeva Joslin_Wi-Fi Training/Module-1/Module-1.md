@@ -124,3 +124,165 @@ Extending Wi-Fi range in large homes or buildings without adding new network seg
     Cost	                    Higher                                                              Lower 
 
 ## 7.Configure your modem/hotspot to operate only in 2.4Ghz and connect your laptop/Wi-Fi device, and capture the capability/properties in your Wi-Fi device. Repeat the same in 5Ghz and tabulate all the differences you observed during this.
+
+
+![Screenshot 2025-03-27 152356](https://github.com/user-attachments/assets/96e904af-0054-4f01-becf-471d0d9927c3)
+
+![Screenshot 2025-03-27 153218](https://github.com/user-attachments/assets/a8c8c539-7990-46aa-90dd-0daf5d09f98a)
+
+![Screenshot_20250327_123302](https://github.com/user-attachments/assets/a64ad33d-8c6c-4550-8d4c-2543d9efebde)
+
+![Screenshot_20250327_153102](https://github.com/user-attachments/assets/fa79f2a6-ebb4-4ac7-b141-718996e94ef0)
+
+
+## 8.What is the difference between IEEE and WFA.
+
+IEEE (Institute of Electrical and Electronics Engineers)
+
+IEEE is a professional organization that develops standards across various fields, including networking and wireless communication.
+
+It defines the technical specifications of Wi-Fi through the IEEE 802.11 standards, such as 802.11a, 802.11b, 802.11n, 802.11ax (Wi-Fi 6), etc.
+
+The IEEE standardization process ensures that wireless communication technologies are well-defined and scientifically validated.
+
+WFA (Wi-Fi Alliance)
+
+Wi-Fi Alliance is an industry consortium responsible for certifying Wi-Fi products to ensure interoperability and compliance with IEEE 802.11 standards.
+
+It promotes Wi-Fi technology and develops additional enhancements, such as Wi-Fi Protected Access (WPA) security standards.
+
+Devices that pass WFA certification tests get the Wi-Fi Certified logo, ensuring that they work well with other Wi-Fi-certified devices.
+
+
+
+
+
+## 9.List down the type of Wi-Fi internet connectivity backhaul, share your home/college's wireless internet connectivity backhaul name and its properties.
+
+Types of Wi-Fi Internet Connectivity Backhaul
+Wi-Fi networks require a backhaul connection to link the local wireless network to the broader internet. There are several types of backhaul technologies:
+
+Fiber Optic Backhaul
+
+Uses fiber optic cables for high-speed data transmission.
+
+Provides low latency, high bandwidth, and reliable performance.
+
+Common in urban areas and large institutions.
+
+DSL (Digital Subscriber Line) Backhaul
+
+Uses telephone lines to deliver internet connectivity.
+
+Slower than fiber but widely available.
+
+Suitable for home broadband connections.
+
+Cable Internet Backhaul
+
+Uses coaxial cable networks (e.g., DOCSIS technology).
+
+Offers higher speeds than DSL but may suffer from congestion.
+
+Wireless/Microwave Backhaul
+
+Uses point-to-point or point-to-multipoint microwave links.
+
+Ideal for areas where laying fiber is expensive or difficult.
+
+Used in rural or remote locations.
+
+Satellite Backhaul
+
+Provides connectivity via satellites.
+
+Useful for remote areas but has higher latency.
+
+Example: Starlink, VSAT (Very Small Aperture Terminal).
+
+Cellular/LTE/5G Backhaul
+
+Uses mobile network infrastructure for backhaul.
+
+Can be used as a primary or backup internet source.
+
+Common in mobile hotspots and temporary setups.
+
+
+
+
+
+
+
+
+## 10.List down the Wi-Fi topologies and use cases of each one.
+
+
+
+
+
+1. Infrastructure Mode (BSS - Basic Service Set)
+Description: A traditional Wi-Fi setup where devices connect to an Access Point (AP), which manages the communication and provides internet access.
+
+Use Cases:
+
+Home and office Wi-Fi networks.
+
+Public hotspots in cafes, airports, and malls.
+
+Enterprise Wi-Fi deployments.
+
+2. Extended Service Set (ESS)
+Description: A collection of multiple APs interconnected through a wired backbone to provide seamless roaming for users.
+
+Use Cases:
+
+Large campuses, hotels, and corporate buildings.
+
+University Wi-Fi networks.
+
+Smart city deployments for continuous coverage.
+
+3. Ad-hoc Mode (IBSS - Independent Basic Service Set)
+Description: Devices communicate directly with each other without an access point (peer-to-peer connection).
+
+Use Cases:
+
+Temporary networks in emergency situations (disaster response).
+
+File sharing between nearby devices (e.g., Wi-Fi Direct, AirDrop).
+
+Military or tactical networks where no fixed infrastructure exists.
+
+4. Mesh Network
+Description: A decentralized network where multiple APs (mesh nodes) communicate with each other to extend Wi-Fi coverage without requiring a wired backbone for each AP.
+
+Use Cases:
+
+Large outdoor or indoor areas (smart homes, stadiums, warehouses).
+
+Municipal or rural broadband deployments.
+
+Industrial IoT and smart city applications.
+
+5. Wi-Fi Direct
+Description: A peer-to-peer communication method where devices connect directly without a traditional AP, but with enhanced security and ease of setup compared to ad-hoc mode.
+
+Use Cases:
+
+Wireless printing and file sharing between devices.
+
+Streaming content (Miracast for screen mirroring).
+
+Gaming networks (multiplayer mode without internet).
+
+6. Hotspot Mode (Captive Portal Networks)
+Description: A public Wi-Fi setup where users connect to an AP and go through a login or authentication process (captive portal).
+
+Use Cases:
+
+Public Wi-Fi in cafes, airports, hotels, and shopping malls.
+
+Enterprise guest Wi-Fi networks.
+
+Conference or event-based internet access.
